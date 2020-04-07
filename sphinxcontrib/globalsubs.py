@@ -31,7 +31,7 @@ class GlobalSubstitutions(SphinxTransform):
     default_priority = 211
 
     def __init__(self, document, startnode=None):
-        super().__init__(document, startnode)
+        super(GlobalSubstitutions, self).__init__(document, startnode)
         self.parser = self.app.registry.create_source_parser(self.app, 'rst')
 
     def apply(self):
